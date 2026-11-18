@@ -1,77 +1,63 @@
 # Candy Chess 🍬♟️
 
-An idiosyncratic version of chess where every piece is represented by a different type of candy. This is a **design & concept** project (rules + visuals), perfect for beginners.
+Candy Chess is ordinary chess with candy pieces. **Phase 1** (the current work) uses **classic chess rules only**. Only the look of the pieces changes. There are no special candy twists yet.
+
+The locked candy mappings are in [`docs/pieces.md`](docs/pieces.md). The board and the exact legal move for every piece are in [`docs/rules/legal-moves.md`](docs/rules/legal-moves.md).
 
 ## Concept
 
-Instead of traditional chess pieces, we use candies. The game can start with standard chess rules and later add fun, sweet twists. The goal is to make chess more playful and visually delightful.
+The board, the moves, and the goal are chess. The pieces just happen to be sweets. That keeps the game easy to learn and straightforward to implement. Optional twists can wait until Phase 1 is playable.
 
-## Candy Piece Ideas
+## Candy mappings (locked)
 
-Here are suggested mappings (feel free to change them!):
+Both sides use the same sweets. Light and Dark are different finishes of those candies, not different types. Details and drawing notes are in [`docs/pieces.md`](docs/pieces.md).
 
-| Chess Piece | Candy | Personality / Reason |
-|-------------|-------|----------------------|
-| **King** | Giant Lollipop | Tall, regal, the most important piece |
-| **Queen** | Chocolate Truffle Box | Powerful, elegant, and a bit fancy |
-| **Rook** | Licorice Rope / Stick | Long, straight, strong, and sturdy |
-| **Bishop** | Candy Cane | Diagonal stripes, festive, slides on diagonals |
-| **Knight** | Gummy Bear or Gummy Worm | Bouncy, jumpy, can "hop" over pieces |
-| **Pawn** | Jelly Beans | Small, colorful, many of them, easy to promote into bigger candies |
+| Chess piece | Candy |
+|-------------|-------|
+| King | Giant Lollipop |
+| Queen | Chocolate Truffle Box |
+| Rook | Licorice Stick |
+| Bishop | Candy Cane |
+| Knight | Gummy Bear |
+| Pawn | Jelly Bean |
 
-### Extra Candy Ideas
-- **Promotion**: When a pawn reaches the end, it turns into a bigger candy (e.g. a full chocolate bar or a bag of gummies).
-- **Captured pieces**: Put them in a "candy jar" or eat them (thematically).
-- Alternative pieces: Sour belts for rooks, peppermint patties for bishops, etc.
+Licorice rope and gummy worm were considered and are not used in Phase 1.
 
-## Rules Plan
+## Phase 1 rules
 
-### Phase 1 – Classic Rules (Current Focus)
-Use standard chess rules so anyone can play. Only the visuals change. Phase 1 is a playable board plus legal moves.
+Phase 1 is classic chess, with candy names and candy art.
 
-### Phase 2 – Idiosyncratic / Sweet Twists (Later)
-Pick 1–2 of these once Phase 1 is playable:
+- How the board is labeled, what a position must remember, and how turns, check, checkmate, and draws work: [`docs/rules/legal-moves.md`](docs/rules/legal-moves.md)
+- The exact legal move for the lollipop, truffle box, licorice stick, candy cane, gummy bear, and jelly bean, including **castling**, **en passant**, and **promotion**: the same file, with a short pointer from each piece in [`docs/pieces.md`](docs/pieces.md)
 
-1. **Sugar Rush**: Moving a piece gives the player a small "sugar" point. At 5 points you can do a special move.
-2. **Melting**: Pieces that stay still for too long (e.g. 5 turns) start to "melt" and lose power (or become capturable more easily).
-3. **Candy Swap**: Once per game, you can swap any two of your pieces’ positions (like a candy mix-up).
-4. **Promotion Bonus**: When a pawn promotes, you also get to place a free extra pawn on your side.
-5. **Color Themes**: White = fruity/sour candies, Black = chocolate/licorice candies.
-
-Start with Phase 1. Add twists later if the project grows.
+Optional later ideas (sugar rush, melting, candy swap, promotion bonus, alternate color themes) are **not** part of Phase 1 and should not be implemented yet.
 
 ## Repo structure
 
-- `docs/` — design docs and rules (Phase 1: legal moves)
+- `docs/` — design docs and rules (Phase 1: pieces and legal moves)
 - `engine/` — Python board representation and legal move generation
 - `frontend/` — JavaScript/HTML/CSS interactive board with candy visuals
 
-See `CONTRIBUTING.md` for a short, beginner-friendly workflow.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for a short, beginner-friendly workflow.
 
-## Next Steps
+## Next steps
 
-Phase 1 work is tracked in the starter issues:
+- [x] Lock the candy mappings in `docs/pieces.md`.
+- [x] Document the board and the exact Phase 1 legal moves in `docs/rules/legal-moves.md`.
+- [ ] Implement a Python board and legal-move engine in `engine/`.
+- [ ] Build a JS interactive board with candy visuals in `frontend/`.
+- [ ] Collect reference images or simple sketches for each candy (Light and Dark).
+- [ ] After Phase 1 is playable, decide whether to add any Phase 2 twists.
 
-1. Write beginner-friendly **legal move rules** in `docs/` (standard chess, with candy piece names).
-2. Implement a **Python board + legal move engine** in `engine/`.
-3. Build a **JS interactive board** with candy visuals in `frontend/`.
+## How to use this repo
 
-After those are underway:
-
-4. Review and pick your favorite candy mappings (edit the table above).
-5. Add a `docs/pieces.md` file with more detailed descriptions or drawing ideas.
-6. Collect reference images of the candies (or generate simple sketches).
-7. Decide later whether to add any Phase 2 twists.
-
-## How to Use This Repo
-
-- Clone or download it
-- Read `CONTRIBUTING.md` if you are new to the workflow
-- Work in the folder that matches your task (`docs`, `engine`, or `frontend`)
-- Open a pull request for your changes
-- Open issues or discussions for new candy ideas or rule suggestions
-- Keep it fun and sweet!
+- Clone or download it.
+- Read `CONTRIBUTING.md` if you are new to the workflow.
+- Treat `docs/pieces.md` as the source of truth for candy identity and appearance.
+- Treat `docs/rules/legal-moves.md` as the source of truth for Phase 1 rules.
+- Work in the folder that matches your task (`docs`, `engine`, or `frontend`).
+- Keep it fun and sweet.
 
 ---
 
-*Created as a starter concept for Candy Chess. Contributions and ideas welcome!*
+*Phase 1 design docs: classic chess rules, candy pieces, no twists yet.*

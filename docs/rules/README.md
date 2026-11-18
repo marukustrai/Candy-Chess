@@ -1,7 +1,7 @@
 # Rules
 
-Phase 1 rules docs belong here.
+Phase 1 rules live in [`legal-moves.md`](legal-moves.md).
 
-Please add `legal-moves.md` with a clear, beginner-friendly explanation of standard chess legal moves, using candy piece names (for example, jelly bean pawns and candy cane bishops).
+That file explains, in beginner-friendly language, how the board is set up and the exact legal moves under standard chess rules, using the locked candy names from [`../pieces.md`](../pieces.md). It covers every piece, plus check, checkmate, stalemate, castling, en passant, and promotion.
 
-Cover each piece, plus checks, checkmate, stalemate, castling, en passant, and promotion. Save Phase 2 twists for later.
+Phase 2 twists are out of scope until Phase 1 is playable.

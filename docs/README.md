@@ -1,11 +1,10 @@
 # Docs
 
-Design docs and rules for Candy Chess live here.
+Design docs and rules for Candy Chess live here. Phase 1 uses classic chess rules only.
 
-## Phase 1
+## Phase 1 files
 
-Write a beginner-friendly description of **legal moves** under standard chess rules, using the candy piece names from the root README. This is the source of truth for the Python engine and the frontend.
+- [`pieces.md`](pieces.md) — locked candy mappings, Light and Dark finishes, starting squares, and drawing notes
+- [`rules/legal-moves.md`](rules/legal-moves.md) — board representation and the exact legal move for every piece, including castling, en passant, and promotion
 
-Suggested first file: `docs/rules/legal-moves.md`
-
-Candy piece mappings and drawing notes can later go in `docs/pieces.md`.
+These two files are the source of truth for the Python engine and the frontend. Do not add Phase 2 twists until Phase 1 is playable.
