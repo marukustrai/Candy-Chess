@@ -26,11 +26,11 @@ Here are suggested mappings (feel free to change them!):
 
 ## Rules Plan
 
-### Phase 1 – Classic Rules (Recommended Start)
-Use standard chess rules so anyone can play. Only the visuals change.
+### Phase 1 – Classic Rules (Current Focus)
+Use standard chess rules so anyone can play. Only the visuals change. Phase 1 is a playable board plus legal moves.
 
-### Phase 2 – Idiosyncratic / Sweet Twists (Optional Ideas)
-Pick 1–2 of these if you want something unique:
+### Phase 2 – Idiosyncratic / Sweet Twists (Later)
+Pick 1–2 of these once Phase 1 is playable:
 
 1. **Sugar Rush**: Moving a piece gives the player a small "sugar" point. At 5 points you can do a special move.
 2. **Melting**: Pieces that stay still for too long (e.g. 5 turns) start to "melt" and lose power (or become capturable more easily).
@@ -40,18 +40,35 @@ Pick 1–2 of these if you want something unique:
 
 Start with Phase 1. Add twists later if the project grows.
 
+## Repo structure
+
+- `docs/` — design docs and rules (Phase 1: legal moves)
+- `engine/` — Python board representation and legal move generation
+- `frontend/` — JavaScript/HTML/CSS interactive board with candy visuals
+
+See `CONTRIBUTING.md` for a short, beginner-friendly workflow.
+
 ## Next Steps
 
-1. Review and pick your favorite candy mappings (edit the table above).
-2. Decide if you want any idiosyncratic rules or stick to classic chess.
-3. Add a `pieces.md` file with more detailed descriptions or drawings ideas.
-4. Collect reference images of the candies (or generate simple sketches).
-5. (Later) Turn the concept into a simple playable prototype if you want.
+Phase 1 work is tracked in the starter issues:
+
+1. Write beginner-friendly **legal move rules** in `docs/` (standard chess, with candy piece names).
+2. Implement a **Python board + legal move engine** in `engine/`.
+3. Build a **JS interactive board** with candy visuals in `frontend/`.
+
+After those are underway:
+
+4. Review and pick your favorite candy mappings (edit the table above).
+5. Add a `docs/pieces.md` file with more detailed descriptions or drawing ideas.
+6. Collect reference images of the candies (or generate simple sketches).
+7. Decide later whether to add any Phase 2 twists.
 
 ## How to Use This Repo
 
 - Clone or download it
-- Edit the markdown files
+- Read `CONTRIBUTING.md` if you are new to the workflow
+- Work in the folder that matches your task (`docs`, `engine`, or `frontend`)
+- Open a pull request for your changes
 - Open issues or discussions for new candy ideas or rule suggestions
 - Keep it fun and sweet!
 
