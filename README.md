@@ -1,2 +1,2 @@
 # Candy-Chess
-An idiosyncratic version of chess using candy pieces as the visual representation. Design docs and concept.
+A sweet twist on chess. Design docs and concept.
