@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "candy-chess"
+version = "0.1.0"
+description = "Phase 1 Candy Chess engine: classic chess rules with candy piece metadata"
+readme = "engine/README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+candy-chess = "engine.cli:main"
+candy-chess-server = "engine.server:main"
+
+[tool.setuptools.packages.find]
+include = ["engine"]
+exclude = ["engine.tests", "engine.tests.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["engine/tests"]
+pythonpath = ["."]
+addopts = "-q"
